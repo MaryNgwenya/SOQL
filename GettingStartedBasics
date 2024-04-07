@@ -1,3 +1,8 @@
+//SOQL is Salesforce Object Query Language. It is used to interact with the database connected to your org and can be used directly inside your Apex code. This lesson takes a look at the basic syntax for writing SOQL queries and how to use your queries inside your Apex code.
+//SOQL is similar to SQL, but has some key differences, much like Apex does with other OOP languages. One of the first differences that people run into, is that Salesforce doesn't allow the use of the asterisk (*) to retrieve all the fields from an object. Salesforce requires you to list only the fields that you want to help avoid running into issues with Governor Limits. 
+
+
+
 //Sample Code
 
 
@@ -5,3 +10,5 @@ List<Account> accounts = [SELECT Id, Name FROM Account LIMIT 10];
 
 for(Account acc : accounts) {
   System.debug('Account ID: ' + acc.Id + ' Account Name : ' + acc.Name);
+}
+
